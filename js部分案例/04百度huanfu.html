@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url(images/skin1.jpg) top center;
+        }
+        .box{
+            height: 150px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .3);
+            padding-top: 50px;
+        }
+        .box img{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var pic1 = document.getElementById("pic1");
+            var pic2 = document.getElementById("pic2");
+            var pic3 = document.getElementById("pic3");
+            pic1.onclick = function(){
+                document.body.style.backgroundImage ="url(images/skin1.jpg)";
+            }
+            pic2.onclick = function(){
+                document.body.style.backgroundImage ="url(images/skin2.jpg)";
+            }
+            pic3.onclick = function(){
+                document.body.style.backgroundImage ="url(images/skin3.jpg)";
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <img src="images/skin1.jpg" alt=""width="100px"id="pic1"/>
+        <img src="images/skin2.jpg" alt=""width="100px"id="pic2"/>
+        <img src="images/skin3.jpg" alt=""width="100px"id="pic3"/>
+    </div>
+</body>
+</html>

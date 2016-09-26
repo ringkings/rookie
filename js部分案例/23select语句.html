@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: url(skin1.jpg);
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var sele = document.getElementById("sele");
+            sele.onchange = function(){
+                switch (this.value){
+                    case "1":
+                        document.body.style.backgroundImage = "url(skin1.jpg)";
+                        break;
+                    case "2":
+                        document.body.style.backgroundImage = "url(skin2.jpg)";
+                        break;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<select name="" id="sele">
+    <option value="1">春</option>
+    <option value="2">夏</option>
+    <option value="3">秋</option>
+    <option value="4">冬</option>
+</select>
+</body>
+</html>

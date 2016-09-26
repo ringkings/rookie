@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>传参显示盒子</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin: 20px;
+            display: none;
+        }
+    </style>
+    <script>
+//        window.onload =function(){}
+        function fn(obj){
+            var a = document.getElementById(obj);
+            a.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+<button onclick = "fn('demo1');">第1个按钮</button>
+<button onclick = "fn('demo2');">第2个按钮</button>
+<button onclick = "fn('demo3');">第3个按钮</button>
+<button onclick = "fn('demo4');">第4个按钮</button>
+<div id="demo1">1</div>
+<div id="demo2">2</div>
+<div id="demo3">3</div>
+<div id="demo4">4</div>
+</body>
+</html>

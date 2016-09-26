@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+           function getclass(classname,id){
+               //浏览器兼容
+              if(document.getElementsByClassName){
+                  //有ID
+                  if(id){
+                      var eleid = document.getElementById(id);
+                      return eleid.getElementsByClassName(classname);
+                  }else{
+                      //没有ID
+                      return document.getElementsByClassName(classname);
+                  }
+              }
+               //不支持浏览器
+               if(id){
+                   var eleid = document.getElementById(id);
+                   var dom = eleid.getElementsByTagName("*")
+               }else{
+                   var dom = document.getElementsByTagName("*");
+               }
+               var arr = [];
+               for(var i= 0;i<dom.length;i++){
+                   var txtarr = dom[i].className.split("");
+                   for(var j = 0;j<txtarr.length;j++){
+                       if(txtarr[i].className == classname){
+                        arr.push(dom[i]);
+                       }
+                   }
+               }
+               return arr;
+           }
+//            console.log(getclass("text","one").length);
+            var aa = getclass("text","one" );
+            for(var i=0;i<aa.length;i++){
+                aa[i].style.backgroundColor = "purple";
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div></div>
+<div class="demo"></div>
+<div></div>
+<div class="text"></div>
+<div></div>
+<div id="one">
+     <div class="demo one text"></div>
+    <div></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text hahjs"></div>
+    <div class="text"></div>
+    <div class="demo"></div>
+</div>
+</body>
+</html>

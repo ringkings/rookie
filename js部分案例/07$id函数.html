@@ -1,0 +1,45 @@
+div<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <div id="box1"></div>
+   <div id="box2"></div>
+   <div id="box3"></div>
+   <script>
+//       var id1 = document.getElementById("box1");
+//       var id2 = document.getElementById("box2");
+//       var id3 = document.getElementById("box3");
+//       function fn(){
+//           id1.style.backgroundColor = "blue";
+//       }
+//       fn();
+//       封装函数
+       function $(id){
+           return document.getElementById(id);
+       }
+       $("box1").style.backgroundColor = "blue";
+       $("box2").style.backgroundColor = "yellow";
+       $("box3").style.backgroundColor = "grey";
+
+
+
+
+
+   </script>
+
+
+
+
+
+</body>
+</html>

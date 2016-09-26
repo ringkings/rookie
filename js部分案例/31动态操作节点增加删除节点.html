@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="demo">
+    <div id="xiongda"></div>
+    <div></div>
+</div>
+<script>
+    var demo = document.getElementById("demo");
+    var childrens = demo.children
+//    var firstdiv = document.createElement("div");
+//    demo.appendChild(firstdiv);
+//    var test = document.createElement("div");
+////    demo.insertBefore(test,childrens[0]);
+//    demo.insertBefore(test.null);
+    //移除节点
+//    var da = document.getElementById("xiongda");
+//    demo.removeChild(da);
+    demo.appendChild(childrens[0].cloneNode());
+    demo.parentNode.appendChild(demo.cloneNode(true));
+    //注意其实是不能克隆ID的因为ID名是特定的
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function(){
+          var goods = document.getElementById("goods");
+            var btn = document.getElementById("btn");
+            btn.onclick = function(){
+                var val = goods.value;
+                switch (val){
+                    case "苹果" :
+                        alert("苹果价格是：5元");
+                        break;
+                    case "香蕉" :
+                        alert("香蕉价格是：2元");
+                        break;
+                    default :
+                        alert("今天没进货")
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="goods"/><button id="btn">查询价格</button>
+</body>
+</html>
